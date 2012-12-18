@@ -1,6 +1,6 @@
-ï»¿---
+---
 layout: post
-title: è¿™æ˜¯æˆ‘ç”¨githubå†™çš„ç¬¬ä¸€ç¯‡åšå®¢
+title: ÕâÊÇÎÒÓÃgithubĞ´µÄµÚÒ»Æª²©¿Í
 ---
 
 {{ page.title }}
@@ -8,7 +8,7 @@ title: è¿™æ˜¯æˆ‘ç”¨githubå†™çš„ç¬¬ä¸€ç¯‡åšå®¢
 
 <p class="meta">22 Nov 2011 - San Francisco</p>
 
-å†™ç€ç©å„¿å‘—ï¼Œè¯•ä¸€è¯•å…ˆï½
+Ğ´×ÅÍæ¶ùßÂ£¬ÊÔÒ»ÊÔÏÈ¡«
 -----------------------------------------------------
 
 If you do it right, open sourcing code is **great advertising** for you and your company. At GitHub we like to talk publicly about libraries and systems we've written that are still closed but destined to become open source. This technique has several advantages. It helps determine what to open source and how much care we should put into a launch. We recently open sourced Hubot, our chat bot, to widespread delight. Within two days it had 500 watchers on GitHub and 409 upvotes on Hacker News. This translates into goodwill for GitHub and more superfans than ever before.
@@ -17,7 +17,7 @@ If your code is popular enough to attract outside contributions, you will have c
 
 Smart people like to hang out with other smart people. Smart developers like to hang out with smart code. When you open source useful code, you **attract talent**. Every time a talented developer cracks open the code to one of your projects, you win. I've had many great conversations at tech conferences about my open source code. Some of these encounters have led to ideas that directly resulted in better solutions to problems I was having with my projects. In an industry with such a huge range of creativity and productivity between developers, the right eyeballs on your code can make a big difference.
 
-If you're hiring, **the best technical interview possible** is the one you don't have to do because the candidate is already kicking ass on one of your open source projects. Once technical excellence has been established in this way, all that remains is to verify cultural fit and convince that person to come work for you. If they're passionate about the open source code they've been writing, and you're the kind of company that cares about well-crafted code (which clearly you are), that should be simple! We hired [Vicent MartÃ­](https://github.com/tanoku) after we saw him doing stellar work on [libgit2](https://github.com/libgit2/libgit2), a project we're spearheading at GitHub to extract core Git functionality into a standalone C library. No technical interview was necessary, Vicent had already proven his skills via open source.
+If you're hiring, **the best technical interview possible** is the one you don't have to do because the candidate is already kicking ass on one of your open source projects. Once technical excellence has been established in this way, all that remains is to verify cultural fit and convince that person to come work for you. If they're passionate about the open source code they've been writing, and you're the kind of company that cares about well-crafted code (which clearly you are), that should be simple! We hired [Vicent Mart¨ª](https://github.com/tanoku) after we saw him doing stellar work on [libgit2](https://github.com/libgit2/libgit2), a project we're spearheading at GitHub to extract core Git functionality into a standalone C library. No technical interview was necessary, Vicent had already proven his skills via open source.
 
 Once you've hired all those great people through their contributions, dedication to open source code is an amazingly effective way to **retain that talent**. Let's face it, great developers can take their pick of jobs right now. These same developers know the value of coding in the open and will want to build up a portfolio of projects they can show off to their friends and potential future employers. That's right, a paradox! In order to keep a killer developer happy, you have to help them become more attractive to other employers. But that's ok, because that's exactly the kind of developer you want to have working for you. So relax and let them work on open source or they'll go somewhere else where they can.
 
