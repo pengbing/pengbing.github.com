@@ -5,14 +5,13 @@ pygments:         true
 paginate:         6
 permalink:        /:title
 
-title:            BeiYuu.com
-url:              http://beiyuu.com
+title:            pengbing.me
+url:              http://pengbing.me
 feed:             /atom.xml
 author:
-    name:         BeiYuu
-    twitter:      twitter.com/beiyuu
-description:      "BeiYuu\'s Blog"
-author_info:      <a href="http://beiyuu.com/about">BeiYuu</a>
+    name:         pengbing
+description:      "pengbing\'s Blog"
+author_info:      <a href="http://pengbing.me/about">pengbing</a>
 
 copyright:
-    - Design by <a href="http://beiyuu.com/about" title="BeiYuu" target="_blank">BeiYuu</a> &copy; Copyright 2012
+    - Design by <a href="http://pengbing.me/about" title="pengbing" target="_blank">pengbing</a> &copy; Copyright 2012
