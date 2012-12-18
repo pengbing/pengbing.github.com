@@ -4,21 +4,14 @@ title: 程序娃娃-彭兵
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
+  <h1>我写的文章</h1>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 
-  <h1>Highlighted Talks</h1>
-  <ul class="posts">
-    <li><span>09 Nov 2011</span> &raquo; <a href="http://vimeo.com/39016099">Video: RubyConf Argentina - Optimizing For Happiness</a></li>
-    <li><span>01 Oct 2011</span> &raquo; <a href="http://confreaks.com/videos/712-rubyconf2011-github-flavored-ruby">Video: RubyConf - GitHub Flavored Ruby</a></li>
-    <li><span>23 Nov 2010</span> &raquo; <a href="http://vimeo.com/17118008">Video: Erlang Factory - Mastering Git Basics</a></li>
-  </ul>
-
-  <h1>Other Interviews, Talks, Etc</h1>
+  <h1>我的开源项目</h1>
   <ul class="posts">
     <li><span>20 Oct 2012</span> &raquo; <a href="http://startupschool.org/2012/preston_werner/">Video: Startup School 2012 - People, Product, Philosophy</a></li>
     <li><span>27 Sep 2012</span> &raquo; <a href="http://www.youtube.com/watch?v=Ln-B_fs9QMY&feature=youtu.be">Video (Panel): Orrick - How to Build a Great Startup Culture</a></li>
@@ -28,7 +21,7 @@ title: 程序娃娃-彭兵
     <li><span>09 Nov 2011</span> &raquo; <a href="http://speakerdeck.com/u/mojombo/p/optimizing-for-happiness">Slides: RubyConf Argentina - Optimizing For Happiness</a></li>
   </ul>
 
-  <h1>我的朋友们：</h1>
+  <h1>我的朋友们</h1>
   <ul class="posts">
     <li><a href="http://www.abaiweb.com/">abaiweb:</a> 无车马喧，不为奢华，不生浮躁，只为喜欢自己喜欢的事情而努力奋斗.</li>
     <li><a href="http://github.com/mojombo/jekyll/">Jekyll:</a> A simple, blog aware, static site generator (used for this site).</li>
