@@ -5,30 +5,11 @@ layout: default
 {{ content }}
 </div>
 
-<div class="blank1"></div>
-<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
-	<a class="bds_tsina"></a>
-	<a class="bds_qzone"></a>
-	<a class="bds_hi"></a>
-	<a class="bds_diandian"></a>
-	<a class="bds_youdao"></a>
-	<a class="bds_tqq"></a>
-	<span class="bds_more"></span>
-	<a class="shareCount"></a>
-</div>
-<div class="c blank1"></div>
-
 <div id="related">
-  <h2>Ïà¹ØÎÄÕÂ£º</h2>
+  <h2>Related Posts</h2>
   <ul class="posts">
     {% for post in site.related_posts limit:3 %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
-
-<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=2627891" ></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
-document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-</script>
