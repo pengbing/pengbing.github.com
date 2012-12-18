@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 这是我用github写的第一篇博客
+title: 用CSS截断文本行并添加省略号
 ---
 
 {{ page.title }}
@@ -8,7 +8,7 @@ title: 这是我用github写的第一篇博客
 
 <p class="meta">22 Nov 2011 - San Francisco</p>
 
-写着玩儿呗，试一试先～
+用CSS截断文本行并添加省略号
 -----------------------------------------------------
 
 If you do it right, open sourcing code is **great advertising** for you and your company. At GitHub we like to talk publicly about libraries and systems we've written that are still closed but destined to become open source. This technique has several advantages. It helps determine what to open source and how much care we should put into a launch. We recently open sourced Hubot, our chat bot, to widespread delight. Within two days it had 500 watchers on GitHub and 409 upvotes on Hacker News. This translates into goodwill for GitHub and more superfans than ever before.
