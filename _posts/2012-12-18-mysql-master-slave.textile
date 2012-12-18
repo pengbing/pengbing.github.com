@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Css Hack
+title: mysql 主从配置
 ---
 
 h1. {{ page.title }}
