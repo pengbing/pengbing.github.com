@@ -9,8 +9,6 @@ p(meta). 2012-12-16 - bing.peng
 
 {% highlight html %}
 
-<?php
-
 /**
  * PHP执行shell脚本命令封装
  * @author bing.peng
@@ -79,8 +77,6 @@ if( $rs = $sh->exec("pwd") ) {
 else {
 	echo $sh->getError();
 }
-
-?>
 
 {% endhighlight %}
 
