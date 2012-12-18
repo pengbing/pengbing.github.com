@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: 用CSS截断文本行并添加省略号
 ---
