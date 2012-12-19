@@ -10,7 +10,7 @@ p(meta). 2012-12-18 - bing.peng
 AOP是OOP的延续，是Aspect Oriented Programming的缩写，意思是面向方面编程，有的又称之为面向切面编程。在企业级开发中面向方面编程很有用。比如，我们在调用某些特定的方法之前，我们需要作一个日志记录，调用方法之后，我们还需要一个日志记录。我们先来看看不使用AOP，我们在PHP里怎么实现。
 
 {% highlight php %}
-
+<?php
 /**
  * 日志类
  */
@@ -38,6 +38,7 @@ class News extends SystemLog {
         // delete news
     }
 }
+?>
 {% endhighlight %}
 
 我们定义一个日志类，类里包含两个方法beforeLog()和afterLog()，用于记录方法调用前和调用后的日志，接着我们定义了新闻类，新闻类继承日志类，要在调用add()方法前后完成日志记录，我们只有在add()方法内部调用beforeLog()和afterLog()两个方法。
@@ -46,7 +47,7 @@ class News extends SystemLog {
 在PHP5中，如果调用未定义的方法，将自动调用_call()方法。利用PHP5的这个特点，我们可以在_call()方法中实现AOP编程，这种AOP编程只是一个AOP雏形，没有Java那样强大。
 
 {% highlight php %}
-
+<?php
 /**
  * 日志类
  */
@@ -72,16 +73,19 @@ class News extends SystemLog {
         // delete news
     }
 }
-
+?>
 {% endhighlight %}
 
 新闻类还是继承日志类，需要注意的是我们在add()方法前加了‘_’，add()方法中并没有任何日志记录相关的代码。
 
 {% highlight php %}
+<?php
 $news = new News();
 $news->add();
+?>
 {% endhighlight %}
 
 调用News类中的add()方法，注意重写后的News类中并没有add()方法，只有_add()方法，这时PHP找不到add()方法则会自动调用_call()方法，_call()方法有两个参数，第一个参数为被调用方法的名称，第二个参数为被调用方法的参数，在_call()方法中首先为被调用的方法名前添加‘_’，这里，添加‘_’后的方法后就变成了_add，_add()方法在News类中是存在的，然后写方法调用前日志，接着使用call_user_func_array()函数执行前对象方法调用，方法调用完成再写方法调用后日志。
 
 回顾一下，我们利用编程惯例和PHP5中调用未定义的方法将自动调用_call()方法的特性，实现了AOP，但这里的AOP还只是雏形，功能还不够强大，随着PHP的发展，我相信未来的PHP在AOP方面也会更加强大。
+
