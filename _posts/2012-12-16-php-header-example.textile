@@ -9,7 +9,7 @@ p(meta). 2012-12-16 - bing.peng
 
 PHP的header()函数，用于发送一个原始的HTTP报文头。因为自己老是记不住，所以给自己备个份，下面演示一些常见的header()函数的用法：
 
-{% highlight html %}
+{% highlight php %}
 
 <?php
 
