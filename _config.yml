@@ -3,8 +3,5 @@
 markdown: 		rdiscount
 pygments: 		true
 
-redcarpet:
-  extensions: [fenced_code_blocks]
-  render_options:
 
 
