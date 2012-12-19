@@ -5,7 +5,7 @@
    <title>{{ page.title }}</title>
    <meta name="author" content="bing.peng" />
    <!-- syntax highlighting CSS -->
-   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+   <link rel="stylesheet" href="/assets/SyntaxHighlighter/styles/shCoreEclipse.css" />
    <!-- Homepage CSS -->
    <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
 </head>
@@ -31,13 +31,42 @@
   </div>
 </div>
 
+<script type="text/javascript" src="/assets/SyntaxHighlighter/scripts/shCore.js'"></script>
+<script type="text/javascript" src="/assets/SyntaxHighlighter/scripts/shAutoloader.js"></script>
+<script type="text/javascript">
+SyntaxHighlighter.autoloader.apply(null, path(
+	'applescript            @shBrushAppleScript.js',
+	'actionscript3 as3      @shBrushAS3.js',
+	'bash shell             @shBrushBash.js',
+	'coldfusion cf          @shBrushColdFusion.js',
+	'cpp c                  @shBrushCpp.js',
+	'c# c-sharp csharp      @shBrushCSharp.js',
+	'css                    @shBrushCss.js',
+	'delphi pascal          @shBrushDelphi.js',
+	'diff patch pas         @shBrushDiff.js',
+	'erl erlang             @shBrushErlang.js',
+	'groovy                 @shBrushGroovy.js',
+	'java                   @shBrushJava.js',
+	'jfx javafx             @shBrushJavaFX.js',
+	'js jscript javascript  @shBrushJScript.js',
+	'perl pl                @shBrushPerl.js',
+	'php                    @shBrushPhp.js',
+	'text plain             @shBrushPlain.js',
+	'py python              @shBrushPython.js',
+	'ruby rails ror rb      @shBrushRuby.js',
+	'sass scss              @shBrushSass.js',
+	'scala                  @shBrushScala.js',
+	'sql                    @shBrushSql.js',
+	'vb vbnet               @shBrushVb.js',
+	'xml xhtml xslt html    @shBrushXml.js'
+));
+SyntaxHighlighter.all();
+</script>
+
 <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=2627891" ></script>
 <script type="text/javascript" id="bdshell_js"></script>
 <script type="text/javascript">
 document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-</script>
-
-<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F17d7e307ae6898157667c7143132b2a8' type='text/javascript'%3E%3C/script%3E"));
 </script>
