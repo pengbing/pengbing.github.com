@@ -34,6 +34,14 @@
 <script type="text/javascript" src="/assets/SyntaxHighlighter/scripts/shCore.js'"></script>
 <script type="text/javascript" src="/assets/SyntaxHighlighter/scripts/shAutoloader.js"></script>
 <script type="text/javascript">
+function path() {
+	var args = arguments, result = [];
+	       
+	for(var i = 0; i < args.length; i++) {
+	    result.push(args[i].replace('@', 'http://pengbing.me/assets/SyntaxHighlighter/scripts/'));
+	}     
+	return result
+};
 SyntaxHighlighter.autoloader.apply(null, path(
 	'applescript            @shBrushAppleScript.js',
 	'actionscript3 as3      @shBrushAS3.js',
