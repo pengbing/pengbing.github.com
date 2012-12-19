@@ -9,13 +9,13 @@ p(meta). 2012-12-18 - bing.peng
 
 实现在最小高度/最低高度，在css2.0中提供了min-height属性，利用min-height属性我们可以轻而易举的实现最小高度，比如：
 
-{% highlight html %}
+{% highlight css %}
 #box { min-height:400px; } 
 {% endhighlight %}
 
 不过很可惜，在IE6中这个属性仅仅作用于td，th，tr对象，所以我们不得为IE6写一些额外的代码。下面我们为id为box的div写一段跨浏览器的最小高度实现： 
 
-{% highlight html %}
+{% highlight css %}
 #box {
     min-height:400px;
     height:auto;
