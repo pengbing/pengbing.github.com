@@ -23,12 +23,10 @@ title: 用CSS截断文本行并添加省略号
 
 为了实现这种效果，很多人都会在服务器端完成这件事情：
 
-<pre class="brush: php">
+<pre class="brush: html"> 
 <div id="news-box">
     <ul>
-		<?php foreach($news_list as $news) { ?>
-			<li><a href="#"><?php echo mb_substr($news['title'], 0, 15); ?>...</a></li>
-		<? } ?>
+		
     </ul>
 </div>
 </pre>
