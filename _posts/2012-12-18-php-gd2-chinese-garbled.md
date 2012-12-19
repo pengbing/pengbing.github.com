@@ -31,7 +31,6 @@ imagedestroy($image);
 <pre class="brush:php">
 $text = '重庆PHP社区';
 $text = iconv("gbk", "utf-8", $text); // 根据实际编码而定
-?>
 </pre>
 
 ##2.字体问题
