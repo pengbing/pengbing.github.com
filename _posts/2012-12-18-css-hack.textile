@@ -52,16 +52,21 @@ h2. 条件注释标签
 	<title>Test</title>
 	<link href="all_browsers.css" rel="stylesheet" type="text/css">
 	<!--[if IE]> <link href="ie_only.css" rel="stylesheet" type="text/css"> <![endif]-->
-	<!--[if lt IE 7]> <link href="ie_6_and_below.css" rel="stylesheet" type="text/css"> <![endif]-->
-	<!--[if !lt IE 7]><![IGNORE[--><![IGNORE[]]> <link href="recent.css" rel="stylesheet" type="text/css"> <!--<![endif]-->
-	<!--[if !IE]>--> <link href="not_ie.css" rel="stylesheet" type="text/css"> <!--<![endif]-->
+	<!--[if lt IE 7]>
+		<link href="ie_6_and_below.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+	<!--[if !lt IE 7]>
+		<![IGNORE[--><![IGNORE[]]><link href="recent.css" rel="stylesheet" type="text/css">
+	<!--<![endif]-->
+	<!--[if !IE]>-->
+		<link href="not_ie.css" rel="stylesheet" type="text/css">
+	<!--<![endif]-->
 	</head>
 	<body>
 		<p>Test</p>
 	</body>
 </html>
 {% endhighlight %}
-
 
 h2. _property: value and -property:value
 
@@ -71,7 +76,9 @@ h2. _property: value and -property:value
 <p id="php-chongqing">
 	重庆PHP社区
 </p>
+{% endhighlight %}
 
+{% highlight css %}
 #php-chongqing {
 	font-size:24px;
 	color: red;
@@ -81,7 +88,6 @@ h2. _property: value and -property:value
 
 非IE6，绿色样式被视为无效样式，所以显示红色；
 IE6，红色和绿色均为有效样式，根据就近原则，所以显示绿色；
-
 
 h2. *property:value
 
@@ -99,3 +105,4 @@ IE7中只修复了IE6里的‘_’和‘-’作为前缀的bug，所在IE7及IE7
 非IE6/7，蓝色和绿色均被视为无效样式，所以显示是红色；
 IE6，三种颜色均有为效CSS，根据就近原则，所以显示绿色；
 IE7，绿色被视为无效样式，红色和蓝色均有为效样式，根据就近原则，所以显示蓝色；
+
