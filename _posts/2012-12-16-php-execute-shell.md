@@ -3,13 +3,12 @@ layout: post
 title: PHP执行shell脚本命令
 ---
 
-h1. {{ page.title }}
+{{ page.title }}
+================
 
-p(meta). 2012-12-16 - bing.peng
+<p>2012-12-16 - bing.peng</p>
 
-{% highlight php %}
-
-<?
+<pre class="brush: php">
 /**
  * PHP执行shell脚本命令封装
  * @author bing.peng
@@ -80,7 +79,6 @@ if( $rs = $sh->exec("pwd") ) {
 else {
 	echo $sh->getError();
 }
-?>
 
-{% endhighlight %}
+</pre>
 
