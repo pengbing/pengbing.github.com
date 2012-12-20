@@ -21,8 +21,9 @@ http://www.php-chongqing.com/index.php?c=article&m=show&id=107
 
 想要在IIS中支持pathinfo，需要再安装一个模块，网站有很多例子，这里我就不再说了。但是我们通常都是购买的虚拟主机，虚拟主机大都使用IIS，空间商并没有让虚拟主机支持pathinfo，而你又没有权限去安装模块，更气愤的是你让管理员安装模块，他根本就不理你。我就有过这种痛苦的经历，当时郁闷得一踏糊涂，因为之前看过一阵子wordpress源码，记得里面有一段代码是用PHP代码实现pathinfo支持的，仔细阅读后，改了一、两个小地方，放到单一入口index.php的开始处即可，需要注意的是这段代码并不能使Nginx支持pathinfo，如何让Nginx支持pathinfo，请参考我的另一篇文章《Windows XP环境安装PHP+Nginx》。
 
-
-<pre class="terminal"><code>// Fix for IIS when running with PHP ISAPI
+{% highlight php %}
+<?php
+// Fix for IIS when running with PHP ISAPI
 if ( empty( $_SERVER['REQUEST_URI'] ) || 
 	( php_sapi_name() != 'cgi-fcgi' && 
 		preg_match( '/^Microsoft-IIS\//', $_SERVER['SERVER_SOFTWARE'] ) ) ) {
@@ -58,5 +59,5 @@ if ( empty( $_SERVER['REQUEST_URI'] ) ||
 
 $PHP_SELF = $_SERVER['PHP_SELF'];
 $_SERVER['PHP_SELF'] = $PHP_SELF = preg_replace("/(\?.*)?$/",'',$_SERVER["REQUEST_URI"]);
-</code></pre>
-
+?>
+{% endhighlight %}
