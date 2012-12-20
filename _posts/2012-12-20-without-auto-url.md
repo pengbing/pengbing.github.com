@@ -13,7 +13,6 @@ title: 自动URL，看上去很美
 例如，我们在CI的controllers文件下新建Article.php，代码如下：
 <pre class="brush:php">
 class Article extends CI_Controller {
-     public function __construct() {
      }
  
      public function show($id) {
