@@ -12,9 +12,9 @@ title: mysql 主从配置
 
 ##1、mysql主从复制
 
-1.1、版本一致
-1.2、初始化表，并在后台启动mysql
-1.3、修改root的密码
+*版本一致
+*初始化表，并在后台启动mysql
+*修改root的密码
 
 
 ##2、修改主服务器master:
@@ -26,6 +26,7 @@ log-bin=mysql-bin   --[必须]启用二进制日志
 server-id=222       --[必须]服务器唯一ID，默认是1，一般取IP最后一段
 </pre>
 
+
 ##3、修改从服务器slave:
 
 <pre class="brush:bash">
@@ -35,17 +36,18 @@ log-bin=mysql-bin   //[必须]启用二进制日志
 server-id=226       //[必须]服务器唯一ID，默认是1，一般取IP最后一段
 </pre>
 
+
 ##4、重启两台服务器的mysql
 
 <pre class="brush:bash">
 /etc/init.d/mysqld restart
 </pre>
 
+
 ##5、在主服务器上建立帐户并授权slave:
 
 <pre class="brush:bash">
 #/usr/local/mysql/bin/mysql -uroot -p
-
 --一般不用root帐号，“%”表示所有客户端都可能连，只要帐号
 --密码正确，此处可用具体客户端IP代替，如192.168.145.226，加强安全。
 mysql>GRANT REPLICATION SLAVE ON *.* to 'mysync'@'%' identified by 'q123456';
@@ -55,7 +57,7 @@ mysql>GRANT REPLICATION SLAVE ON *.* to 'mysync'@'%' identified by 'q123456';
 <pre class="brush:sql">
 mysql>show master status;
 </pre>
-<table>
+<table style="border:1px">
 	<tr>
 		<td>File</td>
 		<td>Position</td>
@@ -72,12 +74,14 @@ mysql>show master status;
 1 row in set (0.00 sec)
 注：执行完此步骤后不要再操作主服务器MYSQL，防止主服务器状态值变化
 
+
 ##7、配置从服务器Slave：
 <pre class="brush:sql">
 mysql>change master to aster_host='192.168.145.222',master_user='tb',master_password='q123456',
       master_log_file='mysql-bin.000004',master_log_pos=308;   //注意不要断开，“308”无单引号
 mysql>start slave;    //启动从服务器复制功能
 </pre>
+
 
 ##8、检查从服务器复制功能状态：
 
