@@ -24,7 +24,7 @@ http://www.php-chongqing.com/index.php?c=article&m=show&id=107
 <pre class="brush:php">
 // Fix for IIS when running with PHP ISAPI
 if ( empty( $_SERVER['REQUEST_URI'] ) || 
-	( php_sapi_name() != 'cgi-fcgi' && 
+	( php_sapi_name() != 'cgi-fcgi' &amp;&amp; 
 		preg_match( '/^Microsoft-IIS\//', $_SERVER['SERVER_SOFTWARE'] ) ) ) {
     // IIS Mod-Rewrite
     if (isset($_SERVER['HTTP_X_ORIGINAL_URL'])) {
@@ -50,7 +50,7 @@ if ( empty( $_SERVER['REQUEST_URI'] ) ||
         }
 
 		// Append the query string if it exists and isn't null
-		if (isset($_SERVER['QUERY_STRING']) && !empty($_SERVER['QUERY_STRING'])) {
+		if (isset($_SERVER['QUERY_STRING']) &amp;&amp; !empty($_SERVER['QUERY_STRING'])) {
 			$_SERVER['REQUEST_URI'] .= '?' . $_SERVER['QUERY_STRING'];
 		}
     }
