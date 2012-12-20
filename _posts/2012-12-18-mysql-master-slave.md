@@ -71,7 +71,9 @@ mysql>show master status;
 		<td></td>
 	</tr>
 </table>
+
 1 row in set (0.00 sec)
+
 注：执行完此步骤后不要再操作主服务器MYSQL，防止主服务器状态值变化
 
 
