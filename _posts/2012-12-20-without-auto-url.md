@@ -11,7 +11,9 @@ title: 自动URL，看上去很美
 所谓自动URL指的是像*CodeIgniter*之类的框架获取用户访问的URL段后，根据约定规则，自动找到你要调用的Controller类，要执行的方法，以及要传递的参数。
 
 例如，我们在CI的controllers文件下新建Article.php，代码如下：
+
 <pre class="brush:php">
+
 class Article extends CI_Controller {
      public function __construct() {
          parent::__construct();
@@ -21,6 +23,7 @@ class Article extends CI_Controller {
          echo 'article id:' . $id;
      }
 } 
+
 </pre>
 
 我们马上可以在浏览器中输入‘xxoo.com/index.php/article/show/2’访问到Article类中的show()方法，并到2当作参数传递给了show()方法，真的很方便，简单、直观，真的是这样吗？我们来看看实际情况。
