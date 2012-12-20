@@ -16,13 +16,14 @@ title: mysql 主从配置
 1.2、初始化表，并在后台启动mysql
 1.3、修改root的密码
 
+
 ##2、修改主服务器master:
 
 <pre class="brush:bash">
 #vi /etc/my.cnf
 [mysqld]
-log-bin=mysql-bin   //[必须]启用二进制日志
-server-id=222       //[必须]服务器唯一ID，默认是1，一般取IP最后一段
+log-bin=mysql-bin   --[必须]启用二进制日志
+server-id=222       --[必须]服务器唯一ID，默认是1，一般取IP最后一段
 </pre>
 
 ##3、修改从服务器slave:
@@ -45,8 +46,8 @@ server-id=226       //[必须]服务器唯一ID，默认是1，一般取IP最后
 <pre class="brush:bash">
 #/usr/local/mysql/bin/mysql -uroot -p
 
-// 一般不用root帐号，“%”表示所有客户端都可能连，只要帐号
-//密码正确，此处可用具体客户端IP代替，如192.168.145.226，加强安全。
+--一般不用root帐号，“%”表示所有客户端都可能连，只要帐号
+--密码正确，此处可用具体客户端IP代替，如192.168.145.226，加强安全。
 mysql>GRANT REPLICATION SLAVE ON *.* to 'mysync'@'%' identified by 'q123456';
 </pre>
 
