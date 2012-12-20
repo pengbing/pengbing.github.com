@@ -50,7 +50,7 @@ oA.onclick = function() {
 <pre class="brush:js">
 var oA = document.getElementById("baidu");
 oA.onclick = function(e) { 
-    if( e  e.preventDefault ) {
+    if( e &amp;&amp; e.preventDefault ) {
         e.preventDefault();
     }
     else {
