@@ -3,8 +3,8 @@ layout: post
 title: 现代Javascript之阻止浏览器默认行为
 ---
 
-{{ page.titlie }}
-=================
+{{ page.title }}
+================
 
 <p class="meta">2012-12-18 - bing.peng</p>
 
