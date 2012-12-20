@@ -14,7 +14,6 @@ title: 自动URL，看上去很美
 <pre class="brush:php">
 class Article extends CI_Controller {
      public function __construct() {
-         parent::__construct();
      }
  
      public function show($id) {
