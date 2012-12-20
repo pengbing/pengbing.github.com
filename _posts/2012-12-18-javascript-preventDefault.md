@@ -47,7 +47,7 @@ oA.onclick = function() {
 
 写一段兼容IE、Firefox、Chrome...的阻止浏览器默认行为的代码:
 
-<pre class="brush:js"></pre>
+<pre class="brush:js">
 var oA = document.getElementById("baidu");
 oA.onclick = function(e) { 
     if( e && e.preventDefault ) {
