@@ -49,8 +49,8 @@ ul.posts span { color:#aaa; font-family: Monaco, "Courier New", monospace; font-
 #post code { border:1px solid #ddd; background-color:#eef; font-size:85%; padding:0 .2em; }
 #post pre code { border:none; }
 
-#post pre.terminal { padding:5px; margin:5px 0; background-color:#000; color:#fff; }
-#post pre.terminal code { background-color:#000; }
+#post pre.terminal { padding:5px; margin:5px 0; background-color:#222; color:#fff; }
+#post pre.terminal code { background-color:#222; }
 
 #related { margin-top:2em; }
 #related h2 { margin-bottom:1em; }
