@@ -39,8 +39,8 @@ server-id=226       //[必须]服务器唯一ID，默认是1，一般取IP最后
 
 ##4、重启两台服务器的mysql
 
-<pre class="brush:bash">
-/etc/init.d/mysqld restart
+<pre class="terminal">
+$ /etc/init.d/mysqld restart
 </pre>
 
 
