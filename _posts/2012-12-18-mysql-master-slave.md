@@ -13,8 +13,9 @@ title: mysql 主从配置
 ## 1. mysql主从复制
 * 版本一致
 * 初始化表，并在后台启动mysql
-* 修改root的密码    
+* 修改root的密码   
 
+<br/><br/> 
 
 ## 2. 修改主服务器master:
 
