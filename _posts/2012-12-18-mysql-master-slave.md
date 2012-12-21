@@ -20,43 +20,35 @@ title: mysql 主从配置
 ## 2. 修改主服务器master:
 
 <pre class="terminal">
-
 #vi /etc/my.cnf
 [mysqld]
 log-bin=mysql-bin   // [必须]启用二进制日志
 server-id=222       // [必须]服务器唯一ID，默认是1，一般取IP最后一段
-
 </pre>
 
 
 ## 3. 修改从服务器slave:
 
 <pre class="terminal">
-
 #vi /etc/my.cnf
 [mysqld]
 log-bin=mysql-bin   // [必须]启用二进制日志
 server-id=226       // [必须]服务器唯一ID，默认是1，一般取IP最后一段
-
 </pre>
 
 
 ## 4. 重启两台服务器的mysql
 
 <pre class="terminal">
-
 $ /etc/init.d/mysqld restart
-
 </pre>
 
 
 ## 5. 在主服务器上建立帐户并授权slave:
 
 <pre class="terminal">
-
 #/usr/local/mysql/bin/mysql -uroot -p
 mysql>GRANT REPLICATION SLAVE ON *.* to 'mysync'@'%' identified by 'q123456';
-
 </pre>
 
 一般不用root帐号，“%”表示所有客户端都可能连，只要帐号ãX !C!/密码正确，此处可用具体客户端IP代替，如192.168.145.226，加强安全。
@@ -65,14 +57,10 @@ mysql>GRANT REPLICATION SLAVE ON *.* to 'mysync'@'%' identified by 'q123456';
 ## 6. 登录主服务器的mysql，查询master的状态
 
 <pre class="terminal">
-
 mysql>show master status;
-
 File             |  Position  |  Binlog_Do_DB  |  Binlog_Ignore_DB
 mysql-bin.000004 |  308       |                | 
-
 1 row in set (0.00 sec)
-
 </pre>
 
 注：执行完此步骤后不要再操作主服务器MYSQL，防止主服务器状态值变化
@@ -81,11 +69,9 @@ mysql-bin.000004 |  308       |                |
 ## 7. 配置从服务器Slave：
 
 <pre class="terminal">
-
 mysql>change master to aster_host='192.168.145.222',master_user='tb',master_password='q123456',
       master_log_file='mysql-bin.000004',master_log_pos=308;   //注意不要断开，“308”无单引号
 mysql>start slave;    //启动从服务器复制功能
-
 </pre>
 
 
