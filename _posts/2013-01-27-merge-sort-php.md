@@ -1,6 +1,6 @@
 ---
-layout:post
-title:利用归并排序合并PHP数组
+layout: post
+title: 利用归并排序合并PHP数组
 ---
 
 {{page.title}}
