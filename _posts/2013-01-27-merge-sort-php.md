@@ -41,6 +41,7 @@ $c = array(
 归并排序(Merge Sort)是利用"归并"技术来进行排序。归并是指将若干个已排序的子文件合并成一个有序的文件。具体实现如下：
 
 <pre class="brush: php">
+
 function my_array_merge( $a_arr, $b_arr ) {
 	$i = 0; $j = 0;
  	$n = count($a_arr);
@@ -59,7 +60,7 @@ function my_array_merge( $a_arr, $b_arr ) {
     			'd'	=> $b_arr[$j]['d'],
     		);
      		$i++; $j++;
-    	} else if( $a_arr[$i]['id'] > $b_arr[$j]['id']) {
+    	} else if( $a_arr[$i]['id'] &gt; $b_arr[$j]['id']) {
     		$item = array(
     			'id'=> $a_arr[$j]['id'],
     			'a'	=> 0,
@@ -82,7 +83,7 @@ function my_array_merge( $a_arr, $b_arr ) {
 	} 
 	
 	// 合并$a余下部份
-	while( $i < $n ) {
+	while( $i &lt; $n ) {
 		$item = array(
 	    	'id'=> $a_arr[$i]['id'],
 	    	'a'	=> $a_arr[$i]['a'],
@@ -95,7 +96,7 @@ function my_array_merge( $a_arr, $b_arr ) {
 	}
 	
 	// 合并$b余下部份
-	while( $j < $m ) {
+	while( $j &lt; $m ) {
 		$item = array(
 	    	'id'=> $a_arr[$j]['id'],
 	    	'a'	=> 0,
@@ -115,4 +116,5 @@ $c = my_array_merge($a, $b);
 echo '&lt;pre&gt;';
 print_r($c);
 echo '&lt;/pre&gt;';
+
 </pre>
