@@ -7,7 +7,7 @@ title: 利用归并排序合并PHP数组
 =================
 <p>2013-01-27 - bing.peng</p>
 
-算法一直是我心中的痛，今天有朋友让我帮忙用PHP写一个方法合并两个数组。
+算法一直是我心中的痛，今天有朋友让我帮忙用PHP写一个方法合并两个数组。<br/>
 数组A：
 <pre class="brush: php">
 $a = array(
@@ -112,7 +112,7 @@ function my_array_merge( $a_arr, $b_arr ) {
 
 // call func
 $c = my_array_merge($a, $b);
-echo '<pre>';
+echo '&lt;pre&gt;';
 print_r($c);
-echo '</pre>';
+echo '&lt;/pre&gt;';
 </pre>
