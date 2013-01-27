@@ -49,7 +49,7 @@ function my_array_merge( $a_arr, $b_arr ) {
  	$data = array();
  	
  	// 合并交叉部份
- 	while( $i < $n && $j < $m ) {
+ 	while( $i < $n &amp;&amp; $j < $m ) {
     	if( $a_arr[$i]['id'] == $b_arr[$j]['id'] ) {
     		$item = array(
     			'id'=> $a_arr[$i]['id'],
