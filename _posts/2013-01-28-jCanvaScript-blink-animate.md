@@ -39,13 +39,11 @@ animate(object parameters, positive int duration, object easing, object onstep, 
 <meta charset="UTF-8">
 <title>闪烁动画</title>
 <style type="text/css">
-* { padding:0; margin:0 }
 body { background:#000; }
 </style>
 </head>
 <body>
 <canvas height="200" width="200" id="paper"></canvas>
-
 <script type="text/javascript" src="http://jcscript.com/data/js/jCanvaScript.1.5.18.min.js"></script>
 <script type="text/javascript">
 jc.start("paper", true);
