@@ -37,7 +37,7 @@ animate(object parameters, positive int duration, object easing, object onstep, 
 
 <!DOCTYPE HTML>
 <html lang="en-US">
-<head>
+<head> 
 <meta charset="UTF-8">
 <title>…¡À∏∂Øª≠</title>
 <style type="text/css">
