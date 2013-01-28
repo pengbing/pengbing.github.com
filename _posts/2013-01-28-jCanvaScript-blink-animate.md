@@ -31,7 +31,7 @@ animate(object parameters, positive int duration, object easing, object onstep, 
 </pre>
 
 <p>代码如下：</p>
-<pre class="bursh:html">
+<pre class="brush:html">
 
 <!DOCTYPE HTML>
 <html lang="en-US">
