@@ -15,7 +15,7 @@ title: 用jCanvaScript创建闪烁动画
 <p>机房的某台设备故障时，需要有报警，闪烁提示。于是开始用jCanvasScript实现闪烁动画，效果如下：</p>
 
 <div style="border:1px solid #ccc;">
-<canvas height="200" width="200" id="paper"></canvas>
+	<iframe src=""></iframe>
 </div>
 
 <p>jCanvaScript提供了一个动画函数，定义如下：</p>
@@ -34,17 +34,6 @@ animate(object parameters, positive int duration, object easing, object onstep, 
 </pre>
 
 
-<script type="text/javascript" src="http://jcscript.com/data/js/jCanvaScript.1.5.18.min.js"></script>
-<script type="text/javascript">
-jc.start("paper", true);
-setInterval(function(){
-    jc.circle(50, 50, 1, "rgba(250, 3, 3, 0.8)", true)
-    	.animate({radius:30, opacity:0}, 1000, function(){
-        	this.del();
-        });
-}, 1000);
-jc.start("paper", true);
-</script>	
 
 
 
