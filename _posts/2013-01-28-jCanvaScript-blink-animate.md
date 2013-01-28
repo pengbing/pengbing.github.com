@@ -14,10 +14,6 @@ title: 用jCanvaScript创建闪烁动画
 
 <p>机房的某台设备故障时，需要有报警，闪烁提示。于是开始用jCanvasScript实现闪烁动画，效果如下：</p>
 
-<div style="height:200px; width:300px;">
-	<iframe width="100%" height="100%" src="http://pengbing.me/examples/jCanvaScript-blink-animate.html" />
-</div>
-
 <p>jCanvaScript提供了一个动画函数，定义如下：</p>
 
 <pre class="brush:js">
