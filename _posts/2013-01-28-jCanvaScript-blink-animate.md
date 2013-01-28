@@ -30,7 +30,37 @@ animate(object parameters, positive int duration, object easing, object onstep, 
 
 </pre>
 
+<p>代码如下：</p>
+<pre class="bursh:html">
 
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>闪烁动画</title>
+<style type="text/css">
+* { padding:0; margin:0 }
+body { background:#000; }
+</style>
+</head>
+<body>
+<canvas height="200" width="200" id="paper"></canvas>
 
+<script type="text/javascript" src="http://jcscript.com/data/js/jCanvaScript.1.5.18.min.js"></script>
+<script type="text/javascript">
+jc.start("paper", true);
+setInterval(function(){
+	// 画一个红色的画，并创建动画
+    jc.circle(50, 50, 1, "rgba(250, 3, 3, 0.8)", true)
+    	.animate({radius:30, opacity:0}, 1000, function(){
+        	this.del();
+        });
+}, 1000);
+jc.start("paper", true);
+</script>	
+</body>
+</html>
+
+</pre>
 
 
