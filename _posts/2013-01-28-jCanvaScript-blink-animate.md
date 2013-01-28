@@ -32,38 +32,6 @@ animate(object parameters, positive int duration, object easing, object onstep, 
 </pre>
 
 
-代码如下：
-<pre class="brush:html">
-
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head> 
-<meta charset="UTF-8">
-<title>闪烁动画</title>
-<style type="text/css">
-* { padding:0; margin:0 }
-body { background:#000; }
-</style>
-</head>
-<body>
-<canvas height="200" width="200" id="paper"></canvas>
-
-<script type="text/javascript" src="http://jcscript.com/data/js/jCanvaScript.1.5.18.min.js"></script>
-<script type="text/javascript">
-jc.start("paper", true);
-setInterval(function(){
-    jc.circle(50, 50, 1, "rgba(250, 3, 3, 0.8)", true)	// 画一个红色的画
-    	.animate({radius:30, opacity:0}, 1000, function(){	// 创建动画
-        	this.del();	// 每次动画需要重绘对象本身
-        });
-}, 1000);
-jc.start("paper", true);
-</script>	
-</body>
-</html>
-
-</pre>
-
 <script type="text/javascript" src="http://jcscript.com/data/js/jCanvaScript.1.5.18.min.js"></script>
 <script type="text/javascript">
 jc.start("paper", true);
