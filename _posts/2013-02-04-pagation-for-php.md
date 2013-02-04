@@ -12,7 +12,7 @@ title: PHP分页类
 看看这个分页类能坚持多久？直接贴代码：
 </p>
 
-<pre class="brush:php">
+{% highlight php %}
 
 /**
  * 分页类
@@ -213,11 +213,11 @@ class Pagination {
 	}
 }
 
-</pre>
+{% endhighlight %}
 
 <p>使用示例：</p>
 
-<pre class="brush:php">
+{% highlight php %}
 
 require ROOT . 'libs/Pagination.lib.php';	// 载入类库
 
@@ -227,10 +227,10 @@ $total = 328; // 总记录数
 $conf = array(
 	// 分页参数名称，默认名称为page，URL为：xx.com/products.php?page=3
 	// 如果设为'a'，URL则为：xx.com/products.php?a=3
-	'tag'		=&lt; 'a',	
-	'pageRows'	=&lt; '15', // 每页显示记录数
-	'paging'	=&lt; 3, 	 // 当前页号，默认从$_GET中获取
-	'url'		=&lt; ''	 // 分页链接的url地址，默认为当前访问地址
+	'tag'		=> 'a',	
+	'pageRows'	=> '15', // 每页显示记录数
+	'paging'	=> 3, 	 // 当前页号，默认从$_GET中获取
+	'url'		=> ''	 // 分页链接的url地址，默认为当前访问地址
 );
 
 // 生成分页对象，如果使用默认设置，不用传参数
@@ -239,11 +239,11 @@ $p = new Pagination( $conf );
 // 生成分页信息，返回分页信息数组
 $pageInfo = $p-&lt;gen( $total );	// $total为总记录数
 
-echo '&gt;pre&lt;';
+echo '<pre>';
 print_r( $pageInfo );
-echo '&gt;/pre&lt;';
+echo '</pre>';
 
-</pre>
+{% endhighlight %}
 
 <p>
 分页信息数组，涵盖了分页所需的相关信息，因为对于分页条的HTML的要求是各式各样的，本类只提供的最常用的一种形式，如果你需要生成其它形式的分页条，利用分页信息数组你也可以快速的扩展出你想要的分页条。
@@ -253,6 +253,4 @@ echo '&gt;/pre&lt;';
 值得注意的是，虽然我们在分页信息数组中提供了limit部份的SQL语句，但是我并不建议你在大数量中表中使用它，因为它会引起性能问题，你应该自己编写更高效的分页SQL语句，比如：
 </p>
 
-<pre class="brush:sql">
 
-</pre>
