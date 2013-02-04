@@ -14,6 +14,7 @@ title: PHP分页类
 
 {% highlight php %}
 
+<?php
 /**
  * 分页类
  * @author bing.peng
@@ -219,6 +220,7 @@ class Pagination {
 
 {% highlight php %}
 
+<?php
 require ROOT . 'libs/Pagination.lib.php';	// 载入类库
 
 $total = 328; // 总记录数
