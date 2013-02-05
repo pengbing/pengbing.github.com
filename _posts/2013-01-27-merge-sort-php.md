@@ -9,6 +9,7 @@ title: 利用归并排序合并PHP数组
 
 算法一直是我心中的痛，今天有朋友让我帮忙用PHP写一个方法合并两个数组。<br/>
 数组A：
+
 {% highlight php %}
 <?php
 $a = array(
@@ -22,6 +23,7 @@ $a = array(
 {% endhighlight %}
 
 数组B：
+
 {% highlight php %}
 <?php
 $b = array(
@@ -32,6 +34,7 @@ $b = array(
 {% endhighlight %}
 
 将A、B数组中ID相同的元素合并在一起，如果只在数组A中存在，则'c','d'项填充0，如果只在数组B中存在，则'a','b'项填充0，结果如下：
+
 {% highlight php %}
 <?php
 $c = array(
@@ -53,7 +56,7 @@ function my_array_merge( $a_arr, $b_arr ) {
     $data = array();
     
     // 合并交叉部份
-    while( $i &lt; $n &amp;&amp; $j &lt; $m ) {
+    while( $i < $n && $j < $m ) {
         if( $a_arr[$i]['id'] == $b_arr[$j]['id'] ) {
             $item = array(
                 'id'=> $a_arr[$i]['id'],
@@ -86,7 +89,7 @@ function my_array_merge( $a_arr, $b_arr ) {
     } 
     
     // 合并$a余下部份
-    while( $i &lt; $n ) {
+    while( $i < $n ) {
         $item = array(
             'id'=> $a_arr[$i]['id'],
             'a' => $a_arr[$i]['a'],
@@ -99,7 +102,7 @@ function my_array_merge( $a_arr, $b_arr ) {
     }
     
     // 合并$b余下部份
-    while( $j &lt; $m ) {
+    while( $j < $m ) {
         $item = array(
             'id'=> $a_arr[$j]['id'],
             'a' => 0,
@@ -116,8 +119,8 @@ function my_array_merge( $a_arr, $b_arr ) {
 
 // call func
 $c = my_array_merge($a, $b);
-echo '&lt;pre&gt;';
+echo '<pre>';
 print_r($c);
-echo '&lt;/pre&gt;';
+echo '</pre>';
 
 {% endhighlight %}
