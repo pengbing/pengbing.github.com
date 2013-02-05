@@ -37,7 +37,10 @@ class Article extends CI_Controller {
 但是我们发现这个URL不但有点丑，还完全暴露了我们的文件路径，没关系，CI提供了路由功能，只需要在route.php中增加一行配置就可以：
 
 {% highlight php %}
+
+<?php
 $route['article/(:num)'] = "front/article/show/$1";
+
 {% endhighlight %}
 
 现在我们得到了我们想要的URL，当你写下一个功能时，你会发现你又需要路由，你所写的每一个功能都需要路由，对么？
