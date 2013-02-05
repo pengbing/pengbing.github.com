@@ -13,7 +13,6 @@ title: PHP GD2 中文乱码处理
 </p>
 
 {% highlight php %}
-
 <?php
 header("content-type:image/png");
 $image = imagecreate(300,80);
@@ -23,7 +22,6 @@ $text = '重庆PHP社区';
 imagestring($image,30,30,30,$text,$textcolor);
 imagepng($image);
 imagedestroy($image);
-
 {% endhighlight %}
 
 <p>
