@@ -16,8 +16,7 @@ title: 用jCanvaScript创建闪烁动画
 
 <p>jCanvaScript提供了一个动画函数，定义如下：</p>
 
-<pre class="brush:js">
-
+{% highlight js %}
 animate(object parameters)
 animate(object parameters, positive int duration)
 //object parameters：动画参数对象，比如{x:180}，表示对象在x轴上移动到180px处；
@@ -28,11 +27,12 @@ animate(object parameters, positive int duration, object easing)
 animate(object parameters, positive int duration, object easing, function fn)
 animate(object parameters, positive int duration, object easing, object onstep, function fn)
 
-</pre>
+{% endhighlight %}
 
 <p>代码如下：</p>
 
-<pre class="brush:html">
+{% highlight html %}
+
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -58,6 +58,6 @@ jc.start("paper", true);
 </script>	
 </body>
 </html>
-</pre>
 
+{% endhighlight %}
 
