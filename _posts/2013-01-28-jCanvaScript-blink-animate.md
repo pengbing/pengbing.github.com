@@ -48,10 +48,10 @@ body { background:#000; }
 <script type="text/javascript">
 jc.start("paper", true);
 setInterval(function(){
-	// 画一个红色的画，并创建动画
+    // 画一个红色的画，并创建动画
     jc.circle(50, 50, 1, "rgba(250, 3, 3, 0.8)", true)
-    	.animate({radius:30, opacity:0}, 1000, function(){
-        	this.del();
+        .animate({radius:30, opacity:0}, 1000, function(){
+            this.del();
         });
 }, 1000);
 jc.start("paper", true);
