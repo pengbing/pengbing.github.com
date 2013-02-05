@@ -13,6 +13,7 @@ title: 用CSS截断文本行并添加省略号
 </p>
 
 {% highlight html %}
+
 <div id="news-box">
     <ul>
         <li><a href="#">重庆PHP走进校园巡回演讲...</a></li>
@@ -21,16 +22,15 @@ title: 用CSS截断文本行并添加省略号
         <li><a href="#">Session过期时登陆页跳出...</a></li>
     </ul>
 </div>
+
 {% endhighlight %}
 
-<p>
-为了实现这种效果，很多人都会用PHP脚本来完成这件事情：
-</p>
+<p>为了实现这种效果，很多人都会用PHP脚本来完成这件事情：</p>
 
-{% highlight %}
+{% highlight html %}
 <div id="news-box">
     <ul>
-		<?php foreach($artilce_list as $article){ ?>
+        <?php foreach($artilce_list as $article){ ?>
         <li>
             <a href="#">
                 <?php echo mb_strsub($article['content'], 0, 8)?>
