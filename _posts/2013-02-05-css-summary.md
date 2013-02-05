@@ -14,13 +14,19 @@ CSS 是 Cascading Style Sheet 的缩写。译作「层叠样式表」。是用�
 如何使用CSS？(网页)
 --------------------
 1.  链接外部样式（推荐）
+
 {% hightlight html %}
+
 <link href="http://www.watchdata.com/msater.css" rel="stylesheet" type="text/css" />
+
 {% endhightlight %}
+
 特点：样式与代码分离
 
 2.  内部定义
+
 {% hightlight html %}
+
 <style type="text/css"> 
 body {font: 10px "Arial"} 
 
@@ -40,15 +46,21 @@ p {
     color: black
 } 
 </style>
+
 {% endhightlight %}
+
 特点：页面内部使用，方便
 
 3.  内联定义/内嵌定义
+
 {% hightlight html %}
+
 <p style="margin-left: 0.5in; margin-right: 0.5in">
     这一行被增加了左右的外补丁
 </p>
+
 {% endhightlight %}
+
 特点：随意、方便
 
 
