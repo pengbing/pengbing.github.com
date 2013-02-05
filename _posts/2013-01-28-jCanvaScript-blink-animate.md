@@ -16,7 +16,7 @@ title: 用jCanvaScript创建闪烁动画
 
 <p>jCanvaScript提供了一个动画函数，定义如下：</p>
 
-{% highlight js %}
+{% highlight javascript %}
 animate(object parameters)
 animate(object parameters, positive int duration)
 //object parameters：动画参数对象，比如{x:180}，表示对象在x轴上移动到180px处；
