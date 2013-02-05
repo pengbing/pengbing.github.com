@@ -10,7 +10,8 @@ title: PHP header 函数用法演示
 
 PHP的header()函数，用于发送一个原始的HTTP报文头。因为自己老是记不住，所以给自己备个份，下面演示一些常见的header()函数的用法：
 
-<pre class="brush: php">
+{% highlight php %}
+<?php
 // 发送一个200 正常响应
 header("HTTP/1.1 200 OK");
 
@@ -42,4 +43,4 @@ header('Content-Type: application/pdf');
 // 设置网页输出一个zip文档
 header('Content-Type: application/zip'); 
 
-</pre>
+{% endhighlight %}
