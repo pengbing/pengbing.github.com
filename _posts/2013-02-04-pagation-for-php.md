@@ -97,8 +97,9 @@ class Pagination {
         $info['upto']       = $upto;    // 数据库开始行
         $info['limit']      = ' LIMIT '.$info['upto'].','.$this->pageRows;  // mysql limit sql part
         $info['paging']     = $this->paging;    // 当前页
-        $info['pre']        = ($this->paging <= 1) ? $this->paging : ($this->paging - 1);       // 上一页
-        $info['next']       = ($this->paging >= $this->totalPage) ? $this->totalPage : ($this->paging + 1); // 下一页
+        $info['pre']        = ($this->paging <= 1) ? $this->paging : ($this->paging - 1); // 上一页
+        $info['next']       = 
+            ($this->paging >= $this->totalPage) ? $this->totalPage : ($this->paging + 1); // 下一页
         $info['total_page'] = $this->totalPage; // 总页数
         $info['total']      = ($this->total < 0) ? 0 : $this->total;    // 总记录数
         $info['page_rows']  = $this->pageRows;  // 每页记录数
