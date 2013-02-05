@@ -11,7 +11,9 @@ title: 现代Javascript之阻止浏览器默认行为
 直接代码：
 
 {% highlight html %}
+
 <a id="baidu" href="http://www.baidu.com">百度</a>
+
 {% endhighlight %}
 
 <p>
@@ -22,11 +24,13 @@ title: 现代Javascript之阻止浏览器默认行为
 分析一下，点击链接就会触发javascript的点击事件，而我们可以在这个函数里改变浏览器的默认行为，代码：
 </p>
 
-{% highlight Javascript %}
+{% highlight javascript %}
+
 var oA = document.getElementById("baidu");
 oA.onclick = function() {
     this.href = "http://www.google.com";
 }
+
 {% endhighlight %}
 
 <p>
@@ -35,10 +39,12 @@ W3C规范中，事件处理函数都会携带一个事件对象作为参数，�
 </p>
 
 {% highlight javascript %}
+
 var oA = document.getElementById("baidu");
 oA.onclick = function(e) { // 参数e为W3C规范中的事件对象(event)
     e.preventDefault(); 
 }
+
 {% endhighlight %}
 
 <p>
@@ -46,21 +52,22 @@ oA.onclick = function(e) { // 参数e为W3C规范中的事件对象(event)
 </p>
 
 {% highlight javascript %}
+
 var oA = document.getElementById("baidu");
 oA.onclick = function() { 
     window.event.returnValue = false;
     return false;
 }
+
 {% endhighlight %}
 
-<p>
-写一段兼容IE、Firefox、Chrome的阻止浏览器默认行为的代码：
-</p>
+<p>写一段兼容IE、Firefox、Chrome的阻止浏览器默认行为的代码：</p>
 
 {% highlight javascript %}
+
 var oA = document.getElementById("baidu");
 oA.onclick = function(e) { 
-    if( e &amp;&amp; e.preventDefault ) {
+    if( e && e.preventDefault ) {
         e.preventDefault();
     }
     else {
@@ -68,5 +75,6 @@ oA.onclick = function(e) {
     }
     return false;
 }
+
 {% endhighlight %}
 
