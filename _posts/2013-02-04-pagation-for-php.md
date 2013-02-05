@@ -238,7 +238,7 @@ $conf = array(
 $p = new Pagination( $conf );   
 
 // 生成分页信息，返回分页信息数组
-$pageInfo = $p-&lt;gen( $total );   // $total为总记录数
+$pageInfo = $p->gen( $total );   // $total为总记录数
 
 echo '<pre>';
 print_r( $pageInfo );
