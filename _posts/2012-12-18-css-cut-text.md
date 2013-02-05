@@ -33,7 +33,7 @@ title: 用CSS截断文本行并添加省略号
         <?php foreach($artilce_list as $article){ ?>
         <li>
             <a href="#">
-                <?php echo mb_strsub($article['content'], 0, 8)?>
+                <?php echo mb_strsub($article['content'], 0, 8); ?>
             </a>
         </li>
         <?php } ?>
