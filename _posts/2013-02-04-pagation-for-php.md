@@ -18,52 +18,51 @@ title: PHP分页类
 /**
  * 分页类
  * @author bing.peng
- *
  */
 class Pagination {
 	
-	private $tag 		= 'page';	// 分页参数名
-	private $total 		= 0;		// 总记录数
-	private $totalPage  = 0;		// 总页数
-	private $pageRows 	= 10;		// 每页记录数
-	private $url;					// 不含分页参数(page=x)的url
-	private $paging;				// 当前页码
+    private $tag       = 'page';// 分页参数名
+    private $total     = 0;		// 总记录数
+    private $totalPage = 0;		// 总页数
+    private $pageRows  = 10;	// 每页记录数
+    private $url;				// 不含分页参数(page=x)的url
+    private $paging;			// 当前页码
 	
-	public function __construct(array $params = array()) {
-		$this->init($params);
-	}
+    public function __construct(array $params = array()) {
+        $this->init($params);
+    }
 	
-	/**
-	 * 初始化，偏好设置
-	 * @param array $params
-	 */
-	public function init( array $params = array() ) {
-		if ( count($params) > 0 ) {   
-    		foreach ($params as $key => $val) {
-      			$this->$key = $val;
-      		}        
-    	}
-	}
+    /**
+     * 初始化，偏好设置
+     * @param array $params
+     */
+    public function init( array $params = array() ) {
+        if ( count($params) > 0 ) {   
+            foreach ($params as $key => $val) {
+                $this->$key = $val;
+            }     
+        }
+    }
 	
-	/**
-	 * 计算，生成分页信息
-	 * @param int $total 总记录数
-	 * @return array(
-	 * 		'url'		=> '链接地址，不含page=x',
-	 * 		'upto'		=> '数据库开始行，即limit x, 10 中的x',
-	 * 		'limit'		=> 'SQL语句的limit部份，如: limit 20,10',
-	 * 		'paging'	=> '当前页页码',
-	 * 		'pre' 		=> '上一页页码',
-	 * 		'next'		=> '下一页页码',
-	 * 		'total_page'=> '总页数', 
-	 * 		'total'		=> '总记录数', 
-	 * 		'page_rows' => '每页显示的记录数',
-	 * 		'tag'		=> '分页参数名称', 
-	 * 		'pages'		=> '分页码数组',
-	 * 		'html'		=> '分页HTML代码'
+    /**
+     * 计算，生成分页信息
+     * @param int $total 总记录数
+     * @return array(
+     *   'url'   => '链接地址，不含page=x',
+	 *   'upto'  => '数据库开始行，即limit x, 10 中的x',
+	 *   'limit' => 'SQL语句的limit部份，如: limit 20,10',
+	 *   'paging'=> '当前页页码',
+	 *   'pre'   => '上一页页码',
+	 *   'next'  => '下一页页码',
+	 *   'total_page' => '总页数', 
+	 *   'total'      => '总记录数', 
+	 *   'page_rows'  => '每页显示的记录数',
+	 *   'tag'        => '分页参数名称', 
+	 *   'pages'      => '分页码数组',
+	 *   'html'       => '分页HTML代码'
 	 * )
 	 */
-	public function gen( $total = null ) {
+    public function gen( $total = null ) {
 		if( !empty($total) ) {
 			$this->total = $total;
 		}
