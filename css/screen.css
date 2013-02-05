@@ -54,7 +54,7 @@ ul.posts span { color:#aaa; font-family: Monaco, "Courier New", monospace; font-
 
 
 /* markdown */
-blockquote { border:1px dotted #EECDBB; background:#F5EFEB; padding:5px; }
+blockquote { border:1px dotted #EECDBB; background:#FBF7F4; padding:5px; }
 blockquote p { margin:0; padding:0; }
 p.note { font-size:12px; background:#fbfdc7; border:1px solid #fcd021; color:#E90A0F; padding:5px; line-height:200%; }
 
