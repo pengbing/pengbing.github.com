@@ -44,11 +44,8 @@ ul.posts span { color:#aaa; font-family: Monaco, "Courier New", monospace; font-
 .site .footer .rss img { border: 0; }
 
 #post {}
-#post pre { border:1px solid #ddd; background:#fff; padding:5px; }
 #post ul, #post ol { margin-left:1.35em; }
-
 #post pre code { border:none; }
-
 #post pre.terminal { padding:5px; margin:5px 0; background-color:#222; color:#fff; }
 #post pre.terminal code { background-color:#222; }
 

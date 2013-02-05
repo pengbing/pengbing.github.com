@@ -3,7 +3,7 @@
 	font-size: 12px !important;
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; 
 }
-.highlight pre { border:1px solid #ddd; background:#f2f2f2; padding:10px; overflow-x: auto; }
+.highlight pre { border:1px solid #ddd; background:#f2f2f2f2; padding:10px; overflow-x: auto; }
 .highlight .c { color: #999988; } /* Comment */
 .highlight .err { color: #a61717; } /* Error */
 .highlight .k { font-weight:600; color:#782158; } /* Keyword */
