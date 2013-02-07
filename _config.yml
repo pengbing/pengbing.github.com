@@ -8,33 +8,6 @@ name: 彭兵的博客
 host: pengbing.me
 desc: 暂无。
 
-custom:
-    category:
-       c: C语言相关
-       database: 数据库     
-       front: HTML&CSS
-       php: PHP
-	   java: java
-	   javascript: javascript
-    categories:
-      - name:  c
-        title: C语言相关
-
-      - name:  database
-        title: 数据库
-
-      - name:  front
-        title: HTML&CSS
-        
-      - name:  php
-        title: PHP
-	 
-	  - name:  java
-	    title: java
-		
-	  - name:  javascript
-	    title: javascript
-		
 meta:
     author:
         name: 彭兵

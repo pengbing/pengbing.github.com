@@ -1,7 +1,6 @@
 ---
 layout: post
 title: PHP分页类
-category: php
 ---
 
 {{page.title}}
