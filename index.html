@@ -4,7 +4,7 @@ title: 首页
 ---
 
 <div id="home">
-	<h1>我写的文章</h1>
+	<h1>我的文章</h1>
 	<ul class="posts">
 	{% for post in site.posts %}
 		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a target="_blank" href="{{ post.url }}">{{ post.title }}</a></li>
