@@ -1,6 +1,6 @@
 ﻿markdown: 		kramdown
 pygments: 		true
-permalink: /posts/:title.html
+permalink: /:title.html
 exclude:
   - README.md
   
