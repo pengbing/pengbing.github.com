@@ -19,7 +19,7 @@
 html, body { height: 100%; }
 body {background-color:white; font:12px helvetica, arial, clean, sans-serif; *font-size:small; text-align:center; }
 h1, h2, h3, h4, h5, h6 { font-size:100%; }
-h1 { margin-bottom:0.55555em; }
+h1 { margin-bottom:0.2em; }
 p { margin:1em 0; }
 a { color:#00a; }
 a:hover { color:black;}
